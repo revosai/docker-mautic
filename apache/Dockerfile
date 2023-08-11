@@ -2,7 +2,7 @@ FROM php:7.4-apache
 
 LABEL vendor="Mautic"
 
-LABEL maintainer="Luiz Eduardo Oliveira Fonseca <luiz@powertic.com>"
+LABEL maintainer="RevOS GmbH <info@revos.ai>"
 
 # Install PHP extensions
 RUN apt-get update && apt-get install --no-install-recommends -y \
@@ -83,7 +83,7 @@ ENV MAUTIC_DB_NAME mautic
 ENV MAUTIC_DB_PORT 3306
 
 # Setting PHP properties
-ENV PHP_INI_DATE_TIMEZONE='UTC' \
+ENV PHP_INI_DATE_TIMEZONE='Asia/Beirut' \
     PHP_MEMORY_LIMIT=512M \
     PHP_MAX_UPLOAD=512M \
     PHP_MAX_EXECUTION_TIME=300
